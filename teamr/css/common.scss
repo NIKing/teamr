@@ -1,0 +1,123 @@
+
+@mixin px2rem($name, $px){
+	#{$name} : $px / 75 * 1rem;
+}
+
+@mixin px2px($name, $px){
+
+	#{$name} : round( $px / 2 ) * 1px;
+
+	[data-dpr="1.25"] & {
+		#{$name} : $px * 1px;
+	}
+
+	[data-dpr="2"] & {
+		#{$name} : $px * 1px;
+	}
+	
+	// for mx3
+	[data-dpr='2.5'] & {
+		#{$name} : round($px / 2 * 2.5) * 1px;
+	}
+
+	// for 小米Note
+	[data-dpr='2.75'] &{
+		#{$name} : round($px / 2 * 2.75) * 1px;
+	}
+
+	// for iphone 6 plus
+	[data-dpr = "3" ] & {
+		#{$name} : round($px / 2 * 3 ) * 1px
+	}
+
+	[data-dpr = "3.5"] & {
+		#{$name} : round($px / 2 * 3.5 ) * 1px;
+	}
+
+	// for 三星 note4
+	[data-dpr = "4"] & {
+		#{$name} : $px * 2px;
+	}
+}
+
+html, body {
+  margin: 0;
+  // height: 100%;
+  width : 100%;
+  font-family: "Microsoft YaHei" !important;
+	-webkit-overflow-scrolling : touch;
+	-moz-overflow-scrolling : touch;
+	overflow-scrolling : touch;
+  /*font-size: 16px;*/
+}
+
+*{
+	margin : 0px;
+	padding : 0px;
+	border:0;
+    list-style:none;
+    @include px2px(font-size, 15);
+}
+ul,li {
+    list-style:none;
+}
+img {
+    border:none;
+}
+em{
+    font-style: normal;
+}
+a {
+    color:#fff;
+    text-decoration:none;
+}
+input{
+	outline : none;
+}
+input::-webkit-input-placeholder{
+	color : #b1bab5;
+}
+
+body{
+	min-height : 480px;
+}
+
+.pull-right{
+	float :right;
+}
+
+.pull-left{
+	float : left;
+}
+
+.hidden{
+	display : none;
+}
+
+.text-center{
+	text-align : center;
+}
+.text-left{
+	text-align : left;
+}
+.text-right{
+	text-align : right;
+}
+
+@mixin borderRadius( $px ){
+	border-radius :  $px;
+	-webkit-border-radius : $px;
+	-moz-border-radius : $px;
+}
+
+.btn{
+	@include px2rem(width, 220);
+	@include px2rem(height, 80);
+	@include borderRadius( 30px );
+}
+
+.btn-primary{
+	background-color : #62b582;
+	color : #fff;
+	@include px2px(font-size, 35);
+}

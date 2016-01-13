@@ -1,0 +1,300 @@
+@import "common";
+
+@mixin border_bottom{
+	border-bottom: 1px solid #dddddd;
+}
+body{
+	min-height : 100%;
+	overflow : hidden;
+}
+.bd-content{
+	overflow-y : scroll;
+	width : 100%;
+	box-sizing : border-box;
+
+	ul{
+		width : 95%;
+		margin : 0px auto;
+	}
+}
+.header{
+	ul{
+		overflow: hidden;
+		@include border_bottom;
+	}
+
+	li{
+		float: left;
+		width : 25%;
+		@include px2rem(height, 88);
+		@include px2rem(line-height, 88);
+		text-align: center;
+		position: relative;
+		
+		&.active span{
+			@include px2rem(width, 108);
+			@include px2rem(height, 46);
+			@include px2rem(line-height, 46);
+			@include px2rem(margin-top, 21);
+			color : #000;
+			background-color: rgb(98, 180, 131);
+			display: block;
+			position: absolute;
+			left : 50%;
+			@include px2rem(margin-left, -54);
+			border-radius : 5px;
+			-webkit-border-radius: 5px;
+			// border:1px solid rgb(98, 180, 131);
+			// line-height: 
+		}			
+	}
+
+	span{
+		@include px2px(font-size, 32);
+	}
+}
+
+.bd{width:100%;}
+
+// 积分
+.integral-wrap{
+	.bd-title{
+		@include px2rem(height, 59);
+		@include px2rem(line-height, 59);
+		width : 100%;
+		background-color : #f8f8f8;
+		@include border_bottom;
+		position : relative;
+		
+		.title-icon{
+			@include px2rem(width, 54);
+			@include px2rem(height, 54);
+			@include px2rem(line-height, 18);
+			position : absolute;
+			background : url(../img/title.png) no-repeat;
+			background-size : 100%;
+			@include px2px(font-size, 24);
+			color : #fff;
+		}
+
+		ul{
+			overflow: hidden;
+			width : 95%;
+			margin : 0px auto;
+		}
+		li {
+			float : left;
+			text-align: center;
+			span{
+				@include px2px(font-size, 24);
+
+			}
+
+			&.first-li{
+				width : 35%;
+			}
+			&.item-title{
+				width : 10.8%;
+			}
+		}
+	}
+	
+	.bd-integral-content,
+	.bd-content{
+
+		ul.integral-list{
+			li{
+				@include px2rem( height, 81 );
+				@include px2rem( line-height, 81 );
+				@include border_bottom;
+			
+				div{
+					float : left;
+					@include px2px(font-size, 24);
+					height: 100%;
+					overflow: hidden;
+					
+					span{
+						@include px2px(font-size, 24);
+					}
+					text-align: center;
+
+					&.first{
+						width : 35%;
+						text-align: left;
+
+						img{
+							@include px2rem(margin-left, 34)
+						}
+						span{
+							&:last-child{
+								@include px2rem(margin-left, 20)
+							}
+						}
+					}
+					&.item{
+						width : 10.8%;
+					}
+
+					.badge{
+						@include px2rem(width, 44);
+						@include px2rem(height, 44);
+						vertical-align: middle;
+					}
+				}
+
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3){
+					span.number{
+						color : red;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+// 赛程
+.schedule-wrap{
+	.bd-title{
+		@include px2rem(height, 59);
+		@include px2rem(line-height, 59);
+		width : 100%;
+		background-color : #f8f8f8;
+		@include border_bottom;
+		position : relative;
+		
+		div{
+			float:left;
+
+			&.title-content{
+				width: 30%;
+				color : #ababab;
+				span{
+					@include px2px(font-size, 24);
+				}
+				
+			}
+
+			&:first-child,
+			&:last-child{
+				width : 35%;
+				img{
+					width : 30px;
+					height : 25px;
+					vertical-align: middle
+				}
+			}		
+
+
+		}
+	}
+
+	.bd-content{
+
+			li{
+				@include px2rem( height, 81 );
+				@include px2rem( line-height, 81 );
+				@include border_bottom;
+				overflow: hidden;
+				width : 100%;
+
+				&>div{
+					float : left;
+					width : 25%;
+
+					&.score{
+						font-size: 30px;
+						
+					}
+
+					img{
+						width : 44px;
+						height: 44px;
+						vertical-align: middle;
+						margin-top: -11px;
+					}
+	
+					span{
+						@include px2px(font-size, 24);
+						font-weight: bold;
+					}
+				}
+			}
+	}
+}
+
+
+// 球员
+.player-assisting-wrap,
+.player-wrap{
+
+	.bd-title{
+		@include px2rem(height, 59);
+		@include px2rem(line-height, 59);
+		width : 100%;
+		background-color : #f8f8f8;
+		@include border_bottom;
+		
+		ul{
+			overflow: hidden;
+		    width: 95%;
+		    margin: 0px auto;
+		}
+		li{
+			overflow: hidden;
+			width : 100%;
+			float : left;
+			width : 33.33%;
+			text-align: center;
+
+			span{
+				@include px2px(font-size, 24);
+				color : #ababab;
+			}
+		}
+
+	}
+
+	.bd-content{		
+
+		li{
+			width : 100%;
+			overflow: hidden;
+			@include px2rem( height, 81 );
+			@include px2rem( line-height, 81 );			
+			@include border_bottom;
+			
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(2){
+				span.number{
+					color: red;
+				}
+			}
+
+			div{
+				width : 33.33%;
+				float: left;
+				text-align: center;
+				img.badge{
+					vertical-align: middle;
+					margin-right: 15px;
+					margin-top: -7px;
+				}
+				span{
+					@include px2px(font-size, 24);
+					// font-weight: bold;
+				}			
+			}
+
+		}
+	}
+}
+
+
+

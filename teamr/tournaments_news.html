@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联赛</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/base.js"></script>
+	<link rel="stylesheet" href="css/tournaments.css"></head>
+<body>
+	<div class="header">
+		<ul id="nav">
+			<li class="active">
+				<span>积分</span>
+			</li>
+			<li>
+				<span>射手</span>
+			</li>
+			<li>
+				<span>助攻</span>
+			</li>
+			<li >
+				<span>赛程</span>
+			</li>
+		</ul>
+	</div>
+	<div class="bd">
+
+		<!-- 积分容器 -->
+		<div class="integral-wrap">
+			<div class="bd-title">
+				<div class="title-icon" id="title"></div>
+				<ul>
+					<li class="first-li">
+						<span>球队</span>
+					</li>
+					<li class="item-title">
+						<span>场</span>
+					</li>
+					<li class="item-title">
+						<span>胜</span>
+					</li>
+					<li class="item-title">
+						<span>平</span>
+					</li>
+					<li class="item-title">
+						<span>负</span>
+					</li>
+					<li class="item-title">
+						<span>进/失</span>
+					</li>
+					<li class="item-title">
+						<span>积分</span>
+					</li>
+				</ul>
+			</div>
+			<div class="bd-content" id="integralList">
+				
+			
+				<!-- <div class="list-warp">
+					<div class="bd-title">
+						<div class="title-icon">D</div>
+						<ul>
+							<li class="first-li">
+								<span>球队</span>
+							</li>
+							<li class="item-title">
+								<span>场</span>
+							</li>
+							<li class="item-title">
+								<span>胜</span>
+							</li>
+							<li class="item-title">
+								<span>平</span>
+							</li>
+							<li class="item-title">
+								<span>负</span>
+							</li>
+							<li class="item-title">
+								<span>进/失</span>
+							</li>
+							<li class="item-title">
+								<span>积分</span>
+							</li>
+						</ul>
+					</div>
+					<ul class="integral-list" id="integral_list">
+						<li>
+							<div class="first">
+								<span class="number">1,</span>
+								<img src="./img/badge.png" class="badge" alt="">
+								<span>阿根廷</span>
+							</div>
+							<div class="item">18</div>
+							<div class="item">12</div>
+							<div class="item">4</div>
+							<div class="item">2</div>
+							<div class="item">12/5</div>
+							<div class="item">23</div>
+						</li>					
+						<li>
+							<div class="first">
+								<span class="number">1,</span>
+								<img src="./img/badge.png" class="badge" alt="">
+								<span>阿根廷</span>
+							</div>
+							<div class="item">18</div>
+							<div class="item">12</div>
+							<div class="item">4</div>
+							<div class="item">2</div>
+							<div class="item">12/5</div>
+							<div class="item">23</div>
+						</li>				
+						<li>
+							<div class="first">
+								<span class="number">1,</span>
+								<img src="./img/badge.png" class="badge" alt="">
+								<span>阿根廷</span>
+							</div>
+							<div class="item">18</div>
+							<div class="item">12</div>
+							<div class="item">4</div>
+							<div class="item">2</div>
+							<div class="item">12/5</div>
+							<div class="item">23</div>
+						</li>				
+						<li>
+							<div class="first">
+								<span class="number">1,</span>
+								<img src="./img/badge.png" class="badge" alt="">
+								<span>阿根廷</span>
+							</div>
+							<div class="item">18</div>
+							<div class="item">12</div>
+							<div class="item">4</div>
+							<div class="item">2</div>
+							<div class="item">12/5</div>
+							<div class="item">23</div>
+						</li>
+					</ul>					
+				</div>-->
+			</div>
+		</div>
+
+
+		<!-- 球员射手容器 -->
+		<div class="player-wrap hidden">
+			<div class="bd-title">
+				<ul>
+					<li><span>球员</span></li>
+					<li><span>球队</span></li>
+					<li><span>进球</span></li>
+				</ul>
+			</div>
+
+			<div class="bd-content">
+				<ul id="player_list">
+					<!-- <li>
+						<div><span class="pull-left number">1,</span><span>李四</span></div>
+						<div><img src="./img/badge.png" class="badge" alt=""><span>阿根廷</span></div>
+						<div><span>12</span></div>
+					</li> -->
+
+				</ul>
+			</div>
+		</div>
+	
+		<!-- 球员助攻容器 -->
+		<div class="player-assisting-wrap hidden">
+			<div class="bd-title">
+				<ul>
+					<li><span>球员</span></li>
+					<li><span>球队</span></li>
+					<li><span>助攻</span></li>
+				</ul>
+			</div>
+
+			<div class="bd-content">
+				<ul id="assisting_list">
+					<!-- <li>
+						<div><span class="pull-left number">1,</span><span>李四</span></div>
+						<div><img src="./img/badge.png" class="badge" alt=""><span>阿根廷</span></div>
+						<div><span>12</span></div>
+					</li>
+					<li>
+						<div><span class="pull-left number">1,</span><span>李四</span></div>
+						<div><img src="./img/badge.png" class="badge" alt=""><span>阿根廷</span></div>
+						<div><span>12</span></div>
+					</li> -->
+
+				</ul>
+			</div>
+		</div>
+
+		<!-- 赛程容器 -->
+		<div class="schedule-wrap hidden">
+
+			<div class="bd-title">
+				<div class="text-right" id="btnLeft">
+					<img src="./img/tournaments_back@2.png" alt="">
+				</div>
+				<div class="title-content text-center">
+					<span id="spanBoutNumber">第十二轮</span>
+				</div>
+				<div id="btnRight">
+					<img src="./img/tournaments_go@2.png" alt="">
+				</div>
+			</div>
+
+			<div class="bd-content">
+				<ul id="schedule_list">
+					<!-- <li>
+						<div class="text-center">
+							<span>11-07</span>
+							<span>9:00</span>
+						</div>
+						<div class="text-right">
+							<span>阿根廷</span>
+							<img src="./img/badge.png" alt="">
+						</div>
+						<div class="text-center score">
+							<span>1:9</span>
+						</div>
+						<div class="text-left">
+							<img src="./img/badge.png" alt="">
+							<span>墨西哥</span>
+						</div>
+					</li> -->					
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+	
+	
+
+	<!-- 赛程模板 -->
+	<script type="text/template" id="tpl_schedule">	
+		<%for( var i = 0, len = items.length; i < len; i++) { var item = items[i]; %>
+			<li>
+				<div class="text-center">
+					<span>11-07</span>
+					<span>9:00</span>
+				</div>
+				<div class="text-right">
+					<span><%=item.teamOneName || '无'%></span>
+					<img src="<%=item.teamOneLogo || './img/badge.png' %>" alt="">
+				</div>
+				<div class="text-center score">
+					<span><%=item.teamOneScore || 0%>:<%=item.teamTwoScore || 0%></span>
+				</div>
+				<div class="text-left">
+					<img src="<%=item.teamTwoLogo || './img/badge.png' %>" alt="">
+					<span><%=item.teamTwoName || '无'%></span>
+				</div>
+			</li>	
+		<%}%>
+	</script>
+
+	<!-- 射手模板 -->
+	<script type="text/template" id="tpl_player">
+
+			<li>
+				<div><span class="pull-left number">1,</span><span>李四</span></div>
+				<div><img src="./img/badge.png" class="badge" alt=""><span>阿根廷</span></div>
+				<div><span>12</span></div>
+			</li>
+	</script>
+
+	<!-- 积分父模板 -->
+	<script type="text/template" id="tpl_parentIntegral">
+
+			<div class="list-warp">
+				<% if ( items.curIndex != 0) { %>
+					<div class="bd-title">
+						<div class="title-icon"><%=items.groupName || "无"%></div>
+						<ul>
+							<li class="first-li">
+								<span>球队</span>
+							</li>
+							<li class="item-title">
+								<span>场</span>
+							</li>
+							<li class="item-title">
+								<span>胜</span>
+							</li>
+							<li class="item-title">
+								<span>平</span>
+							</li>
+							<li class="item-title">
+								<span>负</span>
+							</li>
+							<li class="item-title">
+								<span>进/失</span>
+							</li>
+							<li class="item-title">
+								<span>积分</span>
+							</li>
+						</ul>
+					</div>
+				<%}%>
+
+				<!-- 积分列表 -->
+				<ul class="integral-list" id="integral_list">
+					<%=items.intervalHtml%>
+				</ul>
+			</div>
+
+	</script>
+
+	<!-- 积分模板 -->
+	<script type="text/template" id="tpl_integral">
+		<%for( var i = 0 , len = items.length; i < len; i++) { var item = items[i]; %>
+			<li>
+				<div class="first">
+					<span class="number"><%=(i+1)%>,</span>
+					<img src="<%=item.teamLogo || './img/badge.png' %>" class="badge" alt="">
+					<span><%= item.teamName || "无"%></span>
+				</div>
+				<div class="item"><%= item.matchCount || 0 %></div>
+				<div class="item"><%= item.win || 0 %></div>
+				<div class="item"><%= item.draw || 0 %></div>
+				<div class="item"><%= item.lose || 0 %></div>
+				<div class="item"><%= item.goal || 0 %>/<%= item.fumble || 0 %></div>
+				<div class="item"><%= item.score || 0 %></div>
+			</li>
+		<%}%>
+	</script>
+
+	<!-- 球员助攻模板 -->
+	<script type="text/template" id="tpl_assisting">
+		<li>
+			<div><span class="pull-left number">1,</span><span>李四</span></div>
+			<div><img src="./img/badge.png" class="badge" alt=""><span>阿根廷</span></div>
+			<div><span>12</span></div>
+		</li>
+	</script>
+
+	<script src="js/zepto/src/zepto.js"></script>
+	<script src="js/zepto/src/ajax.js"></script>
+	<script src="js/zepto/src/deferred.js"></script>
+	<script src="js/zepto/src/event.js"></script>
+	<script src="js/zepto/src/callbacks.js"></script>
+	<script src="js/zepto/src/touch.js"></script>
+	<script src='js/zepto/src/form.js'></script>
+
+	<script src="js/commonJs.js"></script>
+	<script src="js/underscore.js"></script>
+	<script>
+	$(function(){
+
+		var initContentHeight = function(){
+
+			// 之所以各加1，是因为有 1像素的边框
+			var headerH = $('.header').height(),
+
+				titleH = $('.bd-title').height(),
+
+				clientH = $(window).height();
+
+			// 内容列表的高度 = 可视区域高度 - 标题高度 - 头部高度
+			
+			var contentH = clientH - titleH - headerH;
+			$('.bd-content').height( contentH );
+		}
+
+		initContentHeight();
+
+
+		/**
+		 * 函数节流，处理函数被频繁调用从而造成的性能问题。
+		 * 实现的方法，使用setTimeout来延时处理执行函数
+		 * but,当我们想执行函数只执行一次的话，那么添加函数节流是不合适的。除非我们给执行函数添加 setTimeout，并且时间要大于节流时间
+		 * @param  {Function} fn       [执行函数]
+		 * @param  {number}   interval [定时器]
+		 * @return {function}            [被调用的函数]
+		 */
+		var throttle = function(fn, interval){
+
+			var 
+				timer,
+				callbackFn = fn,
+				bOk = 0;
+
+			return function(){
+
+				var _this = this,
+					arg = arguments;
+
+				if( !bOk ) {
+					callbackFn.apply(_this, arg);
+					return bOk = 1;
+
+				}
+				if( timer ) {
+					return false;
+				}
+
+				var timer = setInterval(function(){
+					clearInterval( timer );
+					timer = null;
+
+					fn.apply(this, arguments);
+
+				}, interval || 500)
+			}
+		}
+
+
+
+		/**
+		 * 利用原生浏览器滚动，来控制分页显示数据
+		 * 问题：
+		 * 		1，当第一页的数据没有达到，需要滚动的触点时候，改如何加载下一个页面的数据？
+		 * @param {Jquery Object}   elObjForWrap   [滚动的父元素的对象]
+		 * @param {Jquery Object}   elObjForScroll [滚动的元素的对象]
+		 * @param {Function Object} callback       [到触点的时候，需要回调的函数]
+		 */
+		function Scroll( elObjForWrap, elObjForScroll, callback ){
+
+			// 滚动的滚动的父元素
+			this.el_wrap = elObjForWrap;
+
+			// 滚动元素的高度
+			this.clientH = this.el_wrap.height();
+
+			// 要滚动的元素列表
+			this.el_scrollList = elObjForScroll;
+
+			// 滚动到底部后要触发的回调事件
+			this.fn = callback;
+		}
+
+		Scroll.prototype = {
+			bScroll : 1,
+
+			listenerStart : function( ){
+				
+				var 
+					_this = this,
+
+					elObj = _this.el_scrollList,
+
+					// 文档的高度, 减去 1，否则下面计算的结果不能满足条件，继续执行
+					docH = Math.floor( elObj.height() - 1 ),
+
+					// 滚动上部距离顶端的位置
+					curTop = _this.el_wrap.scrollTop();
+
+				// console.log( curTop, docH , _this.clientH )
+
+				if ( curTop >= ( docH - _this.clientH ) && _this.bScroll ){
+					// console.log( bScroll )
+					
+					elObj.scrollTop( curTop );
+
+					_this.fn && _this.fn();
+
+					_this.bScroll = 0;
+				}	
+				
+			}
+		}
+
+
+		var matchId = 1,
+
+			listH = $('.bd-content').height(),
+
+			itemHeight = 81;
+
+		// $('.player-assisting-wrap .bd-content').on('scroll', function(){
+		// 	console.log('1')
+		// })		
+
+		// $('.player-assisting-wrap .bd-content').on('scroll', throttle(function(){
+		// 	console.log('1')
+		// },1000))
+
+
+		// 计算当前滚动的位置是在那个标题组范围内内
+		var calcuTitleLocation = (function(){
+
+			var 
+				// 缓存每组标题的偏移值和标题名称
+				cache_pois = [],
+
+				// 旧标题
+				oldTitle = null,
+
+				// 获取当前标题的方法
+				getCurTitleFn;
+
+			var $title = $('#title')
+
+			var getCurrentTitle = function(){
+				var 
+					cache, i = 0,
+
+					poi = {poi : 0, flg : ""},
+
+					// 当前点的位置
+					curPoi = cache_pois[0] ? cache_pois[0] : poi,
+
+					// 新的点位置，或则认为是下一个标题的位置
+					nextPoi = cache_pois[1] ? cache_pois[1] : poi;
+
+				return function( curLocation ){
+
+					var len = cache_pois.length;
+					if( len < 2 || i >= len  ) return curPoi;
+
+					// console.log( curLocation, nextPoi.poi )
+
+					// 当滚动的位置点大于等于当前点的位置并且小于下一个位置点
+					// 也就是说，当前的滚动的位置还在当前区域内
+					if( curLocation >= curPoi.poi && curLocation <= nextPoi.poi ){
+
+						return curPoi;
+
+					// 当滚动的位置超出当前区域
+					} else if( curLocation > nextPoi.poi ) {
+
+						curPoi = nextPoi;
+						i++;
+						nextPoi = cache_pois[ i + 1 ];
+
+					// 当滚动向回滚动的时候
+					} else if( curLocation <= curPoi.poi ) {
+
+						nextPoi = curPoi;
+						i--;
+						curPoi = cache_pois[ i ]
+					}
+
+					return curPoi;
+
+				}
+			}
+
+			return {
+				saveLocation : function(){
+
+					var list = $('.integral-wrap .list-warp'),
+
+						i = 0,
+
+						// 偏移量，这个值表示,页面布局中，固定的标题和Tab项的高度值
+						// 因为下面使用了 offset() 获取每组标题相对于当前视口的偏移量
+						OFFSET = 127.421875,
+
+						item;
+
+					// 重置缓存内容
+					cache_pois = [];
+
+					for( ; item = list[i++] ; ) {
+						var $item = $(item),
+							poi = $item.offset().top - OFFSET,
+							flg = $item.find('.title-icon').html();
+
+						//保存偏移量的值到缓存中
+						cache_pois.push({ poi : poi, flg : flg });
+					}
+
+					// console.log( cache_pois )
+					getCurTitleFn = getCurrentTitle();
+				},
+				calcuPoiLocation : function(){
+					if( cache_pois.length <= 0 ) return;
+
+					var top = $(this).scrollTop();
+
+					var title = getCurTitleFn( top );
+
+					// console.log( title.flg , oldTitle)
+					if( title.flg !== oldTitle ) {
+						// console.log( title.poi )
+						$title.html( title.flg );
+
+						oldTitle = title.flg || null;
+					}
+					
+
+				}
+			}
+		})()
+
+		// 球员助攻
+		var assisting = (function(){
+
+			var 
+				// 球员助攻
+				$assisting = $('.player-assisting-wrap .bd-content'),
+
+				// 助攻数据列表集合
+				$assisting_list = $('#assisting_list');
+
+
+			var assisting_scroll = new Scroll( $assisting, $assisting_list, getListInfo );
+
+
+			var initEvents = function(){
+
+				$assisting.on( 'scroll', function(){
+
+					assisting_scroll.listenerStart();
+
+				})
+			}
+
+			
+			var getListInfo = (function(){
+
+				var tpl_assisting = $('#tpl_assisting').html(),
+
+					liH = $assisting_list.find('li').height() || itemHeight,
+
+					pageIndex = 1,
+
+					pageSize = Math.ceil( listH / liH );
+
+				return function(){
+
+					$api.ajax('assist', {
+						pageIndex : pageIndex++,
+						pageSize  : pageSize,
+						matchId	  : matchId
+					}, function( res ){
+
+						var resObj = JSON.parse(res)
+						var html = _.template( tpl_assisting, { items :  resObj.data })
+						$assisting_list.append( html );
+
+						// 让滚动加载继续
+						assisting_scroll.bScroll = 1;
+					})
+				}
+			})()
+			
+			initEvents();
+
+			return getListInfo;
+		})()
+
+		// 积分
+		var integral = (function(){
+
+			var 
+				// 球员助攻
+				$content_wrap = $('.integral-wrap .bd-content'),
+
+				tpl_parentIntegral = $('#tpl_parentIntegral').html(),
+
+				tpl_integral = $('#tpl_integral').html(),
+
+				$fixedTitle = $('#title'),
+
+				// 助攻数据列表集合
+				$list = $('#integralList');
+
+
+			var iscroll = new Scroll( $content_wrap, $list, getListInfo );
+
+
+			var initEvents = function(){
+
+				$content_wrap.on( 'scroll', function(){
+
+					iscroll.listenerStart();
+
+					calcuTitleLocation.calcuPoiLocation.call(this);
+
+				})
+			}
+
+			var loadDataToView = function( resObj ){
+
+				if( resObj == null || resObj == undefined ) return;
+
+				var group, html = "", 
+					i = 0,
+					groupDatas = resObj.data;
+
+				// for( ; group = groupDatas[i++] ; ) {
+				for( ; i < groupDatas.length ; i++ ){
+
+					var group = groupDatas[i];
+
+					var integralList =  _.template( tpl_integral, { items :  group.teamInfo } );
+
+					group.intervalHtml = integralList;
+
+					// 添加此字段，是为了让模板中第一个标题不显示
+					group.curIndex = i;
+
+					html += _.template( tpl_parentIntegral, { items :  group } )
+				}
+ 
+				$list.append( html );
+
+			}
+
+			var setFixedTitle = function( resObj ) {
+
+				if( resObj && resObj.data && resObj.data.length > 1 ) {
+
+					$fixedTitle.html( resObj.data[0].groupName );
+				}
+			}
+
+			
+			var getListInfo = (function(){
+
+				var
+					liH = $list.find('li').height() || itemHeight,
+
+					pageIndex = 1,
+
+					pageSize = Math.ceil( listH / liH );
+
+				return function(){
+
+					$api.ajax('credits', {
+						pageIndex : pageIndex++,
+						pageSize  : pageSize,
+						matchId	  : matchId
+					}, function( res ){
+
+						var resObj = JSON.parse(res)
+						// console.log("积分", resObj )
+						loadDataToView( resObj );
+
+						calcuTitleLocation.saveLocation();
+
+						setFixedTitle( resObj );
+
+						// 让滚动加载继续
+						iscroll.bScroll = 1;
+
+					})
+				}
+
+			})()
+			
+			initEvents();
+
+			return getListInfo;		
+
+		})()	
+
+		// 赛程
+		var schedule = (function(){
+
+			var scheduleCache = [],
+
+				// 球员助攻
+				$content_wrap = $('.schedule-wrap .bd-content'),
+
+				// 助攻数据列表集合
+				$list = $('#schedule_list'),
+
+				$btnRight = $('#btnRight'),
+
+				$btnLeft = $('#btnLeft'),
+
+				tpl_schedule = $('#tpl_schedule').html(),
+
+				$spanBoutNumber = $('#spanBoutNumber');
+
+			var ajaxConfings = {
+				pageIndex : 1,
+				pageSize  : 12,
+				matchId	  : matchId,
+				// boutNum	  : 1
+			},
+
+			boutNum = 0;
+
+
+			var iscroll = new Scroll( $content_wrap, $list, getListInfo );
+
+
+			var initEvents = function(){
+
+				$content_wrap.on( 'scroll', function(){
+
+					iscroll.listenerStart();
+				})
+
+				$btnLeft.on('tap', function(){
+
+					boutNum--;
+
+					if( boutNum <= 0 ) boutNum = 0;
+
+					loadDataToView( scheduleCache[ boutNum ] );
+
+				})				
+
+				$btnRight.on('tap', function(){
+					
+					boutNum++;
+					if( boutNum >= scheduleCache.length ) boutNum = scheduleCache.length;
+		
+
+					loadDataToView( scheduleCache[ boutNum ] );
+				})
+			}
+
+
+			var setBoutNumber = function( number ){
+				$spanBoutNumber.html('第' + ( number || 1 ) + '轮');
+
+				// ajaxConfings.boutNum = number;
+			}
+
+			var loadDataToView = function( bouts ){
+
+				if( bouts == null || bouts == undefined ) return;
+
+				var boutsList = bouts.matchBoutTeam || {};
+
+				var html = _.template( tpl_schedule, { items :  boutsList })
+				$list.empty().append( html );
+
+				setBoutNumber( bouts.boutNum || 0 )
+			}
+
+			
+			var getListInfo = (function(){
+
+					liH = $list.find('li').height() || itemHeight,
+
+					pageSize = Math.ceil( listH / liH );
+
+				return function(){
+
+					ajaxConfings.pageSize = pageSize;
+					ajaxConfings.pageIndex++;
+
+					$api.ajax('bout', ajaxConfings , function( res ){
+
+						var resObj = JSON.parse(res),
+							bouts = resObj.data || {};
+
+						scheduleCache = bouts;
+
+						console.log( bouts[0] )
+						loadDataToView( bouts[0] );
+
+						// 让滚动加载继续
+						iscroll.bScroll = 1;
+					})
+				}
+
+			})()
+			
+			initEvents();
+
+			return getListInfo;		
+		})()
+
+
+		// 射手
+		var player = (function(){
+
+			var 
+				// 球员助攻
+				$content_wrap = $('.player-wrap .bd-content'),
+
+				// 助攻数据列表集合
+				$list = $('#play_list');
+
+
+			var iscroll = new Scroll( $content_wrap, $list, getListInfo );
+
+
+			var initEvents = function(){
+
+				$content_wrap.on( 'scroll', function(){
+
+					iscroll.listenerStart();
+
+				})
+			}
+
+			
+			var getListInfo = (function(){
+
+				var tpl_assisting = $('#tpl_player').html(),
+
+					liH = $list.find('li').height() || itemHeight,
+
+					pageIndex = 1,
+
+					pageSize = Math.ceil( listH / liH );
+
+				return function(){
+
+					$api.ajax('goal', {
+						pageIndex : pageIndex++,
+						pageSize  : pageSize,
+						matchId : matchId
+					}, function( res ){
+
+						var resObj = JSON.parse(res)
+						var html = _.template( tpl_assisting, { items :  resObj.data })
+						$list.append( html );
+
+						// 让滚动加载继续
+						iscroll.bScroll = 1;
+					})
+				}
+
+			})()
+			
+			initEvents();
+
+			return getListInfo;		
+		})()
+
+
+
+ 		//获取url中的参数
+        function getUrlParam( name ) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        var initFn = function(){
+
+        	matchId = getUrlParam('matchId');
+
+        	assisting();
+        	integral();
+        	schedule();
+        	player();
+        }
+
+		var initEvents_global = function(){
+
+			var $nav = $('#nav'),
+				$bd = $('.bd > div');
+
+			$nav.on('click', 'li', function(){
+
+				var _this = $(this),
+					index = _this.index();
+
+				$nav.find('li').removeClass('active');
+				_this.addClass('active');
+
+				// console.log( index )
+				$bd.hide().eq( index ).show()
+			})
+		}
+
+		initEvents_global();
+		initFn();
+
+	})
+	</script>
+</body>
+</html>
